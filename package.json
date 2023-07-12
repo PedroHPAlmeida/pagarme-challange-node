@@ -14,10 +14,10 @@
   "repository": "https://github.com/PedroHPAlmeida/pagarme-challange-node.git",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "nodemon": "^3.0.1"
+    "express": "^4.18.2"
   },
   "devDependencies": {
+    "nodemon": "^3.0.1",
     "eslint": "^8.44.0"
   }
 }
