@@ -1,8 +1,8 @@
 class InvalidPaymentMethodError extends Error {
     
 	constructor(message) {
-		super();
-		this.message = message;
+		super(message);
+		this.name = "InvalidPaymentMethodError";
 	}
 
 }

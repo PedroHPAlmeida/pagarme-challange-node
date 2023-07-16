@@ -7,6 +7,7 @@ class ValidationError extends BadRequestError {
 			.map(e => e.message)
 			.join("; ");
 		super(errorMessages);
+		this.name = "ValidationError";
 	}
 
 }
