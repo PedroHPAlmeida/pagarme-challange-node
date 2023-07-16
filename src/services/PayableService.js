@@ -1,5 +1,6 @@
 import { payables } from "../models/index.js";
 import InvalidPaymentMethodError from "../errors/InvalidPaymentMethodError.js";
+import InvalidPayableStatusError from "../errors/InvalidPayableStatusError.js";
 
 class PayableService {
 
@@ -40,11 +41,20 @@ class PayableService {
 		if (paymentMethod === "debit_card") {
 			return dateUpdated;
 		} else if (paymentMethod === "credit_card") {
+			// TODO - extrair o número 30 para uma constante com um nome explicativo
 			dateUpdated.setDate(dateUpdated.getDate() + 30);
 			return dateUpdated;
 		} else {
 			throw new InvalidPaymentMethodError(`payment method ${paymentMethod} is not valid`);
 		} 
+	}
+
+	static async findPayablesByStatus(status) {
+		const possibleStatus = ["paid", "waiting_funds"];
+		if (!possibleStatus.includes(status)) {
+			throw new InvalidPayableStatusError(`payable status ${status} is not valid`);
+		}
+		return await payables.find({ status: status });
 	}
 
 }
