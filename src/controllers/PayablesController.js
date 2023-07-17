@@ -4,7 +4,6 @@ class PayableController {
 
 	static async findPayables(req, res, next) {
 		try {
-			// TODO - implmentar tratamento adequado para os valores permitidos  
 			let status = req.query.cash;
 			if (status === "available") {
 				status = "paid";
