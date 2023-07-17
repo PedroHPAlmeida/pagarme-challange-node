@@ -1,6 +1,6 @@
 # Desafio Software Engineer, Back-end - Pagar.me
 
-Resolução do desafio [Back-end Pagar.me](https://github.com/pagarme/vagas/tree/master/desafios/software-engineer-backend) para implementação e um Payment Service Provider (PSP).
+Resolução do desafio [Back-end Pagar.me](https://github.com/pagarme/vagas/tree/master/desafios/software-engineer-backend) para implementação de um Payment Service Provider (PSP).
 
 
 ## Tecnologias utilizadas
