@@ -6,7 +6,7 @@ import BadRequestError from "../errors/BadRequestError.js";
 
 // eslint-disable-next-line no-unused-vars
 function handler(err, req, res, next) {
-	console.log(err.mes);
+	console.log(err.message);
 	if (err instanceof mongoose.Error.ValidationError) {
 		new ValidationError(err).sendResponse(res);
 	} else if (err.name === "InvalidPaymentMethodError" || err.name === "InvalidPayableStatusError") {
