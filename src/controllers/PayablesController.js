@@ -1,4 +1,4 @@
-import PayableService from "../services/PayableService.js";
+import { PayableService } from "../services/index.js";
 
 class PayableController {
 
