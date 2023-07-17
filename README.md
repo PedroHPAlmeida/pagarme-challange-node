@@ -23,3 +23,11 @@ PORT=3000
 ```
 
 Na pasta raiz do projeto execute o comando `npm run dev`. A API estará disponível no endereço `http://localhost:3000`.
+
+### Rotas disponíveis
+
+* `GET /` - verificar status da API;
+* `POST /api/transactions` - Salvar uma transação;
+* `GET /api/transactions` - Buscar todas as transações;
+* `GET /api/payables?cash=available` - Buscar o saldo disponível (transações feitas com cartão de débito);
+* `GET /api/payables?cash=waiting_funds` - Buscar o saldo disponível (transações feitas com cartão de crédito);
