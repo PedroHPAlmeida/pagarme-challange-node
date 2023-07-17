@@ -10,7 +10,7 @@ class PayableController {
 				status = "paid";
 			}
 			const payables = await PayableService.findPayablesByStatus(status);
-			const amount = payables.reduce((acc, p) => acc + p.value, 0);
+			const amount = PayableService.calculateAmount(payables);
 			res.status(200).json({
 				amount: amount,
 				payables: payables

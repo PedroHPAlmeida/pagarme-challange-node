@@ -24,6 +24,10 @@ class PayableService {
 		return await payables.find({ status: status });
 	}
 
+	static calculateAmount(payables) {
+		return payables.reduce((acc, p) => acc + p.value, 0);
+	}
+
 }
 
 export default PayableService;
