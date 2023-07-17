@@ -1,3 +1,4 @@
-import transactionService from "./TransactionService.js";
+import TransactionService from "./TransactionService.js";
+import PayableService from "./PayableService.js";
 
-export { transactionService };
+export { TransactionService, PayableService };
